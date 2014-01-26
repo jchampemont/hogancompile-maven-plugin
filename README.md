@@ -55,6 +55,7 @@ Here is the full configuration options, with default values :
 ## Issues
 
 Have a bug? A pull request? Please create an issue here on GitHub.
+https://github.com/jchampem/hogancompile-maven-plugin/issues
 
 ## License
 
