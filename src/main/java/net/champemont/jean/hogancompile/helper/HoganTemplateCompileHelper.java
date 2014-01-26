@@ -15,6 +15,8 @@ public class HoganTemplateCompileHelper {
 	
 	private static String COMPILE_CMD = "var result = Hogan.compile(template, {asString: true});";
 	
+	private static String TEMPLATE_HEADER = "var templates = templates || {};";
+	
 	public static String compileHoganTemplate(String template, String templateName) throws IOException {
 		String result = null;
 		Context cx = Context.enter();
@@ -34,6 +36,6 @@ public class HoganTemplateCompileHelper {
 	}
 	
 	public static String getTemplateHeader() {
-		return "var templates = {};";
+		return TEMPLATE_HEADER;
 	}
 }

@@ -18,7 +18,7 @@ public class HoganTemplateCompileHelperTest {
 	private String SIMPLE_MUSTACHES_FILENAME = "simple.mustaches";
 	private String SIMPLE_JS_FILENAME        = "simple.js";
 	
-	private String TEMPLATE_HEADER           = "var templates = {};";
+	private String TEMPLATE_HEADER           = "var templates = templates || {};";
 	
 	@Test
 	public void doTestEmpty() throws IOException {
