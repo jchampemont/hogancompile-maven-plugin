@@ -19,6 +19,7 @@ In order to use it, proceed as following :
             <plugin>
                 <groupId>net.champemont.jean.hogancompile</groupId>
                 <artifactId>hogancompile-maven-plugin</artifactId>
+                <version>1.0</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
