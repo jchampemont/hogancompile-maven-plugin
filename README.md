@@ -11,6 +11,7 @@ In order to use it, proceed as following :
 - Clone this respository
 - mvn clean install
 - Use the plugin in your project as following :
+
 ```
 <project>
     <build>
