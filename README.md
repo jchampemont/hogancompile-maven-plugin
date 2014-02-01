@@ -4,12 +4,6 @@ hogancompile-maven-plugin is a maven plugin for compiling
 [Hogan.js](http://twitter.github.com/hogan.js) templates while building project.
 
 ## Usage
-
-This plugin has not yet been published in maven central repository.
-
-In order to use it, proceed as following :
-- Clone this respository
-- mvn clean install
 - Use the plugin in your project as following :
 
 ```
@@ -19,7 +13,7 @@ In order to use it, proceed as following :
             <plugin>
                 <groupId>net.champemont.jean.hogancompile</groupId>
                 <artifactId>hogancompile-maven-plugin</artifactId>
-                <version>1.0</version>
+                <version>1.0.1</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
