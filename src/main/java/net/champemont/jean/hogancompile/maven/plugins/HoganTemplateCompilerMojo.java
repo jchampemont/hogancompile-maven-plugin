@@ -90,7 +90,9 @@ public class HoganTemplateCompilerMojo extends AbstractMojo {
     			//Compiling template
     			String result = HoganTemplateCompileHelper.compileHoganTemplate(template, templateName);
     			//Writing output file
-    			fileBytes = Charset.forName(outputEncoding).encode(result).array();
+    			ByteBuffer bb = Charset.forName(outputEncoding).encode(result); 
+    			fileBytes = new byte[bb.remaining()];
+    			bb.get(fileBytes);
     			Path outputFilePath = sourceFile.getParent().resolve(templateName + ".js");
     			log.info("writing '" + outputFilePath.toString() + "'");
     			Files.write(outputFilePath, fileBytes, StandardOpenOption.CREATE);
