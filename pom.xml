@@ -1,10 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
   <groupId>net.champemont.jean.hogancompile</groupId>
   <artifactId>hogancompile-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>1.0.1</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>hogancompile-maven-plugin Maven Mojo</name>
   <description>Maven plugin to compile Hogan.js templates</description>
   <url>https://github.com/jchampem/hogancompile-maven-plugin</url>
@@ -16,8 +21,9 @@
     </license>
   </licenses>
   <scm>
-    <url>https://github.com/jchampem/hogancompile-maven-plugin</url>
-    <connection>https://github.com/jchampem/hogancompile-maven-plugin</connection>
+    <connection>scm:git:git@github.com:jchampem/hogancompile-maven-plugin</connection>
+    <developerConnection>scm:git:git@github.com:jchampem/hogancompile-maven-plugin</developerConnection>
+    <url>git@github.com:jchampem/hogancompile-maven-plugin</url>
   </scm>
   <developers>
     <developer>
@@ -25,7 +31,7 @@
       <name>Jean Champémont</name>
       <email>jchampemont@gmail.com</email>
     </developer>
-  </developers
+  </developers>
   <properties>
     <rhino.version>1.7R2</rhino.version>
     <junit.version>4.11</junit.version>
