@@ -4,12 +4,31 @@
   <groupId>net.champemont.jean.hogancompile</groupId>
   <artifactId>hogancompile-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>1.0</version>
+  <version>1.0.1</version>
   <name>hogancompile-maven-plugin Maven Mojo</name>
-  <url>http://maven.apache.org</url>
+  <description>Maven plugin to compile Hogan.js templates</description>
+  <url>https://github.com/jchampem/hogancompile-maven-plugin</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>https://github.com/jchampem/hogancompile-maven-plugin</url>
+    <connection>https://github.com/jchampem/hogancompile-maven-plugin</connection>
+  </scm>
+  <developers>
+    <developer>
+      <id>jchampem</id>
+      <name>Jean Champémont</name>
+      <email>jchampemont@gmail.com</email>
+    </developer>
+  </developers
   <properties>
-  	<rhino.version>1.7R2</rhino.version>
-  	<junit.version>4.11</junit.version>
+    <rhino.version>1.7R2</rhino.version>
+    <junit.version>4.11</junit.version>
   </properties>
   <dependencies>
     <dependency>
@@ -18,14 +37,14 @@
       <version>3.1.1</version>
     </dependency>
     <dependency>
-	<groupId>org.apache.maven</groupId>
-		<artifactId>maven-project</artifactId>
-		<version>2.2.1</version>
-	</dependency>
+    <groupId>org.apache.maven</groupId>
+      <artifactId>maven-project</artifactId>
+      <version>2.2.1</version>
+    </dependency>
     <dependency>
-    	<groupId>rhino</groupId>
-    	<artifactId>js</artifactId>
-    	<version>${rhino.version}</version>
+      <groupId>rhino</groupId>
+      <artifactId>js</artifactId>
+      <version>${rhino.version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -35,47 +54,27 @@
     </dependency>
   </dependencies>
   <build>
-  	<pluginManagement>
-  		<plugins>
-	  		<plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
-	  		<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-	  		<plugin>
-	  			<groupId>org.eclipse.m2e</groupId>
-	  			<artifactId>lifecycle-mapping</artifactId>
-	  			<version>1.0.0</version>
-	  			<configuration>
-	  				<lifecycleMappingMetadata>
-	  					<pluginExecutions>
-	  						<pluginExecution>
-	  							<pluginExecutionFilter>
-	  								<groupId>
-	  									org.apache.maven.plugins
-	  								</groupId>
-	  								<artifactId>
-	  									maven-plugin-plugin
-	  								</artifactId>
-	  								<versionRange>
-	  									[3.2,)
-	  								</versionRange>
-	  								<goals>
-	  									<goal>descriptor</goal>
-	  								</goals>
-	  							</pluginExecutionFilter>
-	  							<action>
-	  								<ignore></ignore>
-	  							</action>
-	  						</pluginExecution>
-	  					</pluginExecutions>
-	  				</lifecycleMappingMetadata>
-	  			</configuration>
-	  		</plugin>
-  		</plugins>
-	</pluginManagement>
+    <plugins>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
 </project>
