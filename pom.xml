@@ -8,7 +8,7 @@
   <groupId>net.champemont.jean.hogancompile</groupId>
   <artifactId>hogancompile-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>1.0.1</version>
+  <version>1.0.2-SNAPSHOT</version>
   <name>hogancompile-maven-plugin Maven Mojo</name>
   <description>Maven plugin to compile Hogan.js templates</description>
   <url>https://github.com/jchampem/hogancompile-maven-plugin</url>
